@@ -14,7 +14,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/compiler/run",
+        "https://algorithmacebackend.onrender.com/api/compiler/run",
         {
           code: code,
           language: language,
