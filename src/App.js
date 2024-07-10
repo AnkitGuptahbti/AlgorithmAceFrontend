@@ -59,9 +59,9 @@ function App() {
         />
         <button type="submit">Run Code</button>
       </form>
+      <h3>Output:</h3>
       {output && (
         <div>
-          <h3>Output:</h3>
           <pre>{output}</pre>
           <h3>Details:</h3>
           <p>
