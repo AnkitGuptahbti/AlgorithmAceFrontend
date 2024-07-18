@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { BiDownArrowAlt } from "react-icons/bi";
 
 const QuestionsList = () => {
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -22,19 +23,27 @@ const QuestionsList = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Questions List</h1>
-      <ul style={{ listStyleType: "none", padding: 0 }}>
-        {questions.map((question) => (
-          <li key={question._id} style={{ marginBottom: "10px" }}>
-            <Link
-              to={`/question/${question._id}`}
-              style={{ textDecoration: "none", color: "blue" }}
-            >
-              {question.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <h1>
+        Questions List:
+        <br />
+        <BiDownArrowAlt />
+      </h1>
+      {questions ? (
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          {questions.map((question) => (
+            <li key={question._id} style={{ marginBottom: "10px" }}>
+              <Link
+                to={`/question/${question._id}`}
+                style={{ textDecoration: "none", color: "blue" }}
+              >
+                {question.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <h3>Loading...</h3>
+      )}
     </div>
   );
 };
