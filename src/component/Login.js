@@ -24,7 +24,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://algorithmacebackend.onrender.com/api/auth/login", {
+      const res = await axios.post("https://algorithmacebackend.onrender.com/api/auth/login", {
         email,
         password,
       });

@@ -9,7 +9,7 @@ const QuestionsList = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch("http://algorithmacebackend.onrender.com/api/questions");
+        const response = await fetch("https://algorithmacebackend.onrender.com/api/questions");
         const data = await response.json();
         setQuestions(data);
       } catch (error) {

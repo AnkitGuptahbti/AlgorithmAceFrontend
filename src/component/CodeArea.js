@@ -176,7 +176,7 @@ function CodeArea() {
   const fetchTestCases = async () => {
     try {
       const response = await axios.get(
-        `http://algorithmacebackend.onrender.com/api/testcases/${id}`
+        `https://algorithmacebackend.onrender.com/api/testcases/${id}`
       );
       // console.log("first")
       // console.log(response.data[0].testCases);
@@ -192,7 +192,7 @@ function CodeArea() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://algorithmacebackend.onrender.com/api/compiler/run",
+        "https://algorithmacebackend.onrender.com/api/compiler/run",
         {
           code: code,
           language: language,
@@ -225,7 +225,7 @@ function CodeArea() {
 
     try {
       const response = await axios.post(
-        "http://algorithmacebackend.onrender.com/api/compiler/run",
+        "https://algorithmacebackend.onrender.com/api/compiler/run",
         {
           code: code,
           language: language,

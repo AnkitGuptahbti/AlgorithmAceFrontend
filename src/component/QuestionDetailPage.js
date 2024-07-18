@@ -10,7 +10,7 @@ const QuestionDetailPage = () => {
     const fetchQuestion = async () => {
       try {
         const response = await fetch(
-          `http://algorithmacebackend.onrender.com/api/questions/${id}`
+          `https://algorithmacebackend.onrender.com/api/questions/${id}`
         );
         const data = await response.json();
         setQuestion(data);
