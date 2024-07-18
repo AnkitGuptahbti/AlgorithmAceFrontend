@@ -4,13 +4,12 @@ import { BiDownArrowAlt } from "react-icons/bi";
 
 const QuestionsList = () => {
   const [questions, setQuestions] = useState(null);
+  // "https://algorithmacebackend.onrender.com/api/questions"
 
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(
-          "https://algorithmacebackend.onrender.com/api/questions"
-        );
+        const response = await fetch("http://algorithmacebackend.onrender.com/api/questions");
         const data = await response.json();
         setQuestions(data);
       } catch (error) {
@@ -22,7 +21,7 @@ const QuestionsList = () => {
   }, []);
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px"}}>
       <h1>
         Questions List:
         <br />

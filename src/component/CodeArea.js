@@ -18,7 +18,7 @@
 //     try {
 //       const response = await axios.post(
 //         // "https://algorithmacebackend.onrender.com/api/compiler/run",
-//         "http://localhost:5000/api/compiler/run",
+//         "http://algorithmacebackend.onrender.com/api/compiler/run",
 //         {
 //           code: code,
 //           language: language,
@@ -41,7 +41,7 @@
 //       const { id } = useParams();
 //     try {
 //       const response = await axios.get(
-//         `http://localhost:5000/api/testcases/${id}` // Replace with your API endpoint
+//         `http://algorithmacebackend.onrender.com/api/testcases/${id}` // Replace with your API endpoint
 //       );
 //       setTestCases(response.data.testCases); // Assuming test cases are fetched as an array
 //     } catch (error) {
@@ -57,7 +57,7 @@
 //     for (const testCase of testCases) {
 //       try {
 //         const response = await axios.post(
-//           "http://localhost:5000/api/compiler/run",
+//           "http://algorithmacebackend.onrender.com/api/compiler/run",
 //           {
 //             code: code,
 //             language: language,
@@ -176,7 +176,7 @@ function CodeArea() {
   const fetchTestCases = async () => {
     try {
       const response = await axios.get(
-        `https://algorithmacebackend.onrender.com/api/testcases/${id}`
+        `http://algorithmacebackend.onrender.com/api/testcases/${id}`
       );
       // console.log("first")
       // console.log(response.data[0].testCases);
@@ -192,7 +192,7 @@ function CodeArea() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://algorithmacebackend.onrender.com/api/compiler/run",
+        "http://algorithmacebackend.onrender.com/api/compiler/run",
         {
           code: code,
           language: language,
@@ -225,7 +225,7 @@ function CodeArea() {
 
     try {
       const response = await axios.post(
-        "https://algorithmacebackend.onrender.com/api/compiler/run",
+        "http://algorithmacebackend.onrender.com/api/compiler/run",
         {
           code: code,
           language: language,

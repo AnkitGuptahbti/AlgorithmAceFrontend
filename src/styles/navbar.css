@@ -1,0 +1,19 @@
+/* src/styles/navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b5451;
+  padding: 10px 20px;
+  color: #fff;
+}
+.btnlogout{
+  
+border-radius: 5px;
+width: 8rem;
+cursor: pointer;
+}
+.logo{
+  font-size: larger;
+}

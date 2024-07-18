@@ -10,7 +10,7 @@ const QuestionDetailPage = () => {
     const fetchQuestion = async () => {
       try {
         const response = await fetch(
-          `https://algorithmacebackend.onrender.com/api/questions/${id}`
+          `http://algorithmacebackend.onrender.com/api/questions/${id}`
         );
         const data = await response.json();
         setQuestion(data);
@@ -32,7 +32,7 @@ const QuestionDetailPage = () => {
     .join("\n");
 
   return (
-    <div style={{ padding: "20px", display: "flex" }}>
+    <div style={{ padding: "20px", display: "flex" ,backgroundColor:""}}>
       <div>
         <h2>{question.title}</h2>
         <p>{question.description}</p>
